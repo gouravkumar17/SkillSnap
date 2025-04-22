@@ -7,12 +7,20 @@ const cookieParser = require("cookie-parser");
 
 const app = express();
 connectDB();
+const allowedOrigins = [
+  'http://localhost:3000',
+  'https://marvelous-nougat-fb7e17.netlify.app'
+];
+
 const corsOptions = {
-  origin: [
-    'http://localhost:3000',
-    'http://localhost:51570',
-    'https://tourmaline-stroopwafel-5db6a7.netlify.app'
-  ],
+  origin: function (origin, callback) {
+    // allow requests with no origin (like mobile apps, curl, Postman)
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],
   credentials: true,
