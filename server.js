@@ -8,7 +8,7 @@ const cookieParser = require("cookie-parser");
 const app = express();
 connectDB();
 const corsOptions = {
-  origin: 'http://localhost:3000',  // Allow requests only from your frontend origin
+  origin: 'https://tourmaline-stroopwafel-5db6a7.netlify.app/',  // Allow requests only from your frontend origin
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],
   credentials: true,  // Allow cookies/credentials to be sent
