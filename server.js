@@ -11,7 +11,7 @@ connectDB();
 // ✅ Ensure full origins (including https)
 const allowedOrigins = [
   'http://localhost:3000',
-  'https://roleq-jobtracker.netlify.app/'
+  'https://roleq-jobtracker.netlify.app'
 ];
 
 // ✅ CORS options
