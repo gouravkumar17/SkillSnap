@@ -9,7 +9,7 @@ const app = express();
 connectDB();
 const allowedOrigins = [
   'http://localhost:3000',
-  'https://zesty-choux-a9d5f3.netlify.app'
+  'poetic-meerkat-1fe672.netlify.app'
 ];
 
 const corsOptions = {
