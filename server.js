@@ -9,7 +9,7 @@ const app = express();
 connectDB();
 const allowedOrigins = [
   'http://localhost:3000',
-  'https://marvelous-nougat-fb7e17.netlify.app'
+  'https://zesty-choux-a9d5f3.netlify.app'
 ];
 
 const corsOptions = {
